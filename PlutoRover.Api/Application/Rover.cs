@@ -28,22 +28,22 @@ namespace PlutoRover.Api.Application
             {
                 case CompassPoints.North:
                 {
-                    TryMove(CurrentRow, CurrentCol - 1 * directionToggle,  isBackwards, isRow: false);
+                    TryMove(CurrentRow - 1 * directionToggle, CurrentCol,  isBackwards, isRow: true);
                     break;
                 }
                 case CompassPoints.South:
                 {
-                    TryMove(CurrentRow, CurrentCol + 1 * directionToggle, !isBackwards, isRow: false);
+                    TryMove(CurrentRow  + 1 * directionToggle, CurrentCol, !isBackwards, isRow: true);
                     break;
                 }
                 case CompassPoints.West:
                 {
-                    TryMove(CurrentRow - 1 * directionToggle, CurrentCol, isBackwards, isRow: true);
+                    TryMove(CurrentRow, CurrentCol - 1 * directionToggle, isBackwards, isRow: false);
                     break;
                 }
                 case CompassPoints.East:
                 {
-                    TryMove(CurrentRow + 1 * directionToggle, CurrentCol, !isBackwards, isRow: true);
+                    TryMove(CurrentRow, CurrentCol + 1 * directionToggle, !isBackwards, isRow: false);
                     break;
                 }
             }

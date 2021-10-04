@@ -55,8 +55,55 @@ namespace PlutoRover.Tests
             Assert.NotNull(exception);
             Assert.IsType<InvalidEnumArgumentException>(exception);
         }
-        
-        //TODO: Should work with lower letters too
-        //TODO Successful test
+
+        [Theory]
+        [InlineData("FFFS")]
+        [InlineData("fffs")]
+        [InlineData("BBBS")]
+        [InlineData("bbbs")]
+        public void Start_Should_CallRover_WithMove(string commands)
+        {
+            //Arrange
+            var readerMock = new Mock<IReader>();
+            var loggerMock = new Mock<ILogger<Commander>>();
+            var roverMock = new Mock<IRover>();
+            
+            readerMock
+                .Setup(x => x.Read())
+                .Returns(commands);
+            var commander = new Commander(roverMock.Object, readerMock.Object, loggerMock.Object);
+            
+            //Act
+            var exception = Record.Exception(() => commander.Start());
+            
+            //Assert
+            Assert.Null(exception);
+            roverMock.Verify(x => x.Move(It.IsAny<char>()), Times.Exactly(3));
+        }
+
+        [Theory]
+        [InlineData("RRRS")]
+        [InlineData("rrrs")]
+        [InlineData("LLLS")]
+        [InlineData("llls")]
+        public void Start_Should_CallRover_WithTurn(string commands)
+        {
+            //Arrange
+            var readerMock = new Mock<IReader>();
+            var loggerMock = new Mock<ILogger<Commander>>();
+            var roverMock = new Mock<IRover>();
+
+            readerMock
+                .Setup(x => x.Read())
+                .Returns(commands);
+            var commander = new Commander(roverMock.Object, readerMock.Object, loggerMock.Object);
+
+            //Act
+            var exception = Record.Exception(() => commander.Start());
+
+            //Assert
+            Assert.Null(exception);
+            roverMock.Verify(x => x.Turn(It.IsAny<char>()), Times.Exactly(3));
+        }
     }
 }

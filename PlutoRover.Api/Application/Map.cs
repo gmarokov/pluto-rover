@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using Microsoft.Extensions.Logging;
 using PlutoRover.Api.Application.Options;
 using IConfigurationProvider = PlutoRover.Api.Configuration.IConfigurationProvider;

@@ -23,7 +23,7 @@ namespace PlutoRover.Tests
         public void Move_Forward_FromInitialState()
         {
             //Arrange
-            const string expectedCurrentPosition = "0,1,S";
+            const string expectedCurrentPosition = "1,0,S";
             var rover = new Rover(_mapMock.Object, Mock.Of<ILogger<Rover>>());
             
             //Act
@@ -37,7 +37,7 @@ namespace PlutoRover.Tests
         public void Move_Backward_FromGivenState()
         {
             //Arrange
-            const string expectedCurrentPosition = "0,2,S";
+            const string expectedCurrentPosition = "2,0,S";
             var rover = new Rover(_mapMock.Object, Mock.Of<ILogger<Rover>>());
             
             //Act
@@ -54,7 +54,7 @@ namespace PlutoRover.Tests
         public void Move_Wrap_EdgeColumn()
         {
             //Arrange
-            const string expectedCurrentPosition = "0,9,S";
+            const string expectedCurrentPosition = "9,0,S";
             var rover = new Rover(_mapMock.Object, Mock.Of<ILogger<Rover>>());
             
             //Act
@@ -68,7 +68,7 @@ namespace PlutoRover.Tests
         public void Move_Wrap_EdgeRow()
         {
             //Arrange
-            const string expectedCurrentPosition = "9,0,W";
+            const string expectedCurrentPosition = "0,9,W";
             var rover = new Rover(_mapMock.Object, Mock.Of<ILogger<Rover>>());
             
             //Act
@@ -245,7 +245,7 @@ namespace PlutoRover.Tests
         public void MoveAndTurn_ShouldHave_RightPosition()
         {
             //Arrange
-            const string expectedCurrentPosition = "9,8,N";
+            const string expectedCurrentPosition = "8,9,N";
             var rover = new Rover(_mapMock.Object, Mock.Of<ILogger<Rover>>());
             
             //Act

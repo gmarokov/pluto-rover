@@ -6,9 +6,6 @@ namespace PlutoRover.Api.Infrastructure
     public class ConsoleReader : IReader
     {
         /// <inheritdoc />
-        public string Read()
-        {
-            return Console.ReadLine();
-        }
+        public string Read() => Console.ReadLine();
     }
 }

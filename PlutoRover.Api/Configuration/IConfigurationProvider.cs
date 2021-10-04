@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using PlutoRover.Api.Application.Options;
+﻿using PlutoRover.Api.Application.Options;
 
 namespace PlutoRover.Api.Configuration
 {
