@@ -40,7 +40,7 @@ namespace PlutoRover.Api.Application
             while(!hasStopCommand)
             {
                 var commands = ReadCommands();
-                _logger.LogInformation($"Proccessing commands: {commands}");
+                _logger.LogInformation($"Proccessing commands: {string.Join("", commands)}");
                 hasStopCommand = TryExecuteCommands(commands);
             }
             Stop();
