@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlutoRover.Api", "PlutoRover.Api\PlutoRover.Api.csproj", "{227C6762-1964-4E0E-9BE6-2C3EA020FCF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlutoRover.Tests", "PlutoRover.Tests\PlutoRover.Tests.csproj", "{EFB2367D-AD5F-4AA0-9B6F-66C0F2A73604}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{227C6762-1964-4E0E-9BE6-2C3EA020FCF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{227C6762-1964-4E0E-9BE6-2C3EA020FCF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{227C6762-1964-4E0E-9BE6-2C3EA020FCF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{227C6762-1964-4E0E-9BE6-2C3EA020FCF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFB2367D-AD5F-4AA0-9B6F-66C0F2A73604}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFB2367D-AD5F-4AA0-9B6F-66C0F2A73604}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFB2367D-AD5F-4AA0-9B6F-66C0F2A73604}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFB2367D-AD5F-4AA0-9B6F-66C0F2A73604}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
